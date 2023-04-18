@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #e5e7eb;
+}
+.search__news > h2 {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 30px;
+}
+form {
+  display: flex;
+  justify-content: center;
+  margin: 0px auto;
+  width: 90vw;
+  max-width: 1000px;
+  padding: 50px 10px;
+}
+.search__input {
+  font-size: 20px;
+  padding: 10px 0px 10px 10px;
+  border: none;
+  border-bottom: 2px solid #a7ade2;
+}
+
+.articles {
+  padding: 10px;
+}
+.article {
+  max-width: 700px;
+  margin: 10px auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px -1px rgb(0 0 0 / 10%);
+  border-radius: 7px;
+}
+.article > h4 {
+  margin-bottom: 10px;
+}
+.article__info {
+  color: #7c7474;
+}
+.article__cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 200px;
+  margin-top: 10px;
+}
+.article__btn,
+.article__read {
+  cursor: pointer;
+  padding: 6px 9px;
+  background: transparent;
+  border: none;
+  color: red;
+  font-size: 18px;
+}
+.article__read {
+  color: #4242ec;
+}
+.loading {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid #ccc;
+  margin: 20px auto;
+  border-top-color: blue;
+  animation: loader 0.5s linear infinite;
+}
+.error {
+  text-align: center;
+  font-size: 30px;
+  padding: 10px;
+  background: red;
+  width: 50%;
+  margin: 0 auto;
+  color: #fff;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.buttons > button {
+  cursor: pointer;
+  padding: 6px 9px;
+  border: none;
+  background: #4299e1;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 4px;
+}
+.buttons > p {
+  font-size: 25px;
+}
+@keyframes loader {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .article > h4 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .articles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .article {
+    width: 400px;
+  }
+}
